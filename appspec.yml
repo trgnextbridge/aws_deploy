@@ -1,22 +1,22 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html/
+    - source: /
+      destination: /var/www/html
 permissions:
-  - object: /var/www/html/
-    pattern: "**"
-    owner: www-data
-    group: www-data
-    type:
-      - directory
-      - file
+    - object: /var/www/html
+      pattern: "**"
+      owner: www-data
+      group: www-data
+      mode: 755
+      type:
+        - file
 hooks:
-  ApplicationStop:
-    - location: .aws/application-stop.sh
-      timeout: 30
-      runas: root
-   ApplicationStart:
-    - location: .aws/application-start.sh
-      timeout: 30
-      runas: root
+    BeforeInstall:
+     - location: scripts/installapache.sh
+       runas: root
+     - location: scripts/startapache.sh
+       runas: root
+    AfterInstall:
+     - location: scripts/restartapache.sh
+       runas: root
