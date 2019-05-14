@@ -13,5 +13,5 @@ permissions:
         - file
 hooks:
     AfterInstall:
-     - location: scripts/restartapache.sh
+     - location: scripts/ubunturestartapache.sh
        runas: root
