@@ -3,7 +3,7 @@ os: linux
 phases:
   install:
     runtime-versions:
-        apache: 2.4
+        php: 5.4
 files:
     - source: /
       destination: /var/www/html
@@ -15,7 +15,4 @@ permissions:
       mode: 755
       type:
         - file
-hooks:
-    AfterInstall:
-     - location: scripts/ubunturestartapache.sh
-       runas: root
+
