@@ -3,7 +3,7 @@ os: linux
 phases:
   install:
     runtime-versions:
-        httpd: 2.4
+        apache: 2.4
 files:
     - source: /
       destination: /var/www/html
