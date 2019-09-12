@@ -6,4 +6,4 @@ phases:
       - npm install
   build:
     commands:
-      - npm test
+      - apt-get install wget
