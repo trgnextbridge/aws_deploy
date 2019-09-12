@@ -1,6 +1,9 @@
 version: 0.2
 os: linux
-
+phases:
+  install:
+    runtime-versions:
+        httpd: 2.4
 files:
     - source: /
       destination: /var/www/html
