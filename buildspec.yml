@@ -4,5 +4,4 @@ phases:
     commands:
       - apt-get install wget
      artifacts:
-  files:
-    - '**/*'
+  
