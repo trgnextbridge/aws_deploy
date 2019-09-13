@@ -7,3 +7,6 @@ phases:
   build:
     commands:
       - apt-get install wget
+      artifacts:
+  files:
+    - build*/**
