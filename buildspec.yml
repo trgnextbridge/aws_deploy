@@ -1,12 +1,8 @@
 version: 0.2
-
 phases:
   install:
     commands:
-      - echo "ece"
-  build:
-    commands:
-      - echo "efe"
+      - apt-get install wget
      artifacts:
   files:
     - '**/*'
