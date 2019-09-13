@@ -3,10 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install
+      - echo "ece"
   build:
     commands:
-      - npm test
+      - echo "efe"
      artifacts:
   files:
     - '**/*'
